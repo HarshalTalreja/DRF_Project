@@ -1,0 +1,16 @@
+{% extends "order_management/base.html" %}
+{% load rest_framework %}
+{% block bodyblock %}
+  <div class="jumbotron">
+    <h1>Welcome to the Products page</h1>
+  </div>
+  <h2>Below is the list of products available:</h2>
+  <ol>
+    {% for product in product_list %}
+    <h4><li>{{ product.Name }}</li></h4>
+    {% endfor %}
+  </ol>
+  <br>
+  <a class="btn btn-primary" href="{% url 'create_product' %}" role="button">Add New Product</a>
+
+{% endblock %}

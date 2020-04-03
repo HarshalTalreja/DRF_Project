@@ -1,0 +1,12 @@
+{% extends "order_management/base.html" %}
+{% block bodyblock %}
+  <div class="jumbotron">
+    <h1>Create New Company</h1>
+  </div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Create">
+  </form>
+
+{% endblock %}
